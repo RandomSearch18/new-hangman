@@ -38,7 +38,7 @@ def play(word):
                 if "_" not in word_completion:
                     guessed = True
                 
-        elif len(guess) == len(word) and guess.isalpha():
+        elif guess.isalpha():
             if guess in guessed_words:
                 print("You have already guessed the word", guess)
             elif guess != word:
@@ -64,7 +64,7 @@ def play(word):
 def main():
     word = get_word()
     play(word)
-    while input("Play Again? (Y/N) ").upper() == Y:
+    while input("Play Again? (Y/N) ").upper() == "Y":
         word = get_word()
         play(word)
 
